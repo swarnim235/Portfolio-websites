@@ -1,0 +1,13 @@
+/* This is a CSS comment */
+
+body {
+    background-color: #f0f0f0; /* A very light gray background */
+    font-family: Arial, sans-serif; /* Change the default font */
+    line-height: 1.6; /* Improve readability of text */
+    color: #333; /* Dark gray text color */
+}
+
+h1 {
+    color: #007bff; /* A nice blue color for your main heading */
+    text-align: center; /* Center the main heading */
+}
