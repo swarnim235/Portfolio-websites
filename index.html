@@ -4,37 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swarnim Bastola - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <!-- Always put your CSS link in the head section -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <body>
-        <header>
-          <h1>Swarnim Bastola</h1>
-          <p>student</p>
-        </header>
-<section>
-    <h2>About Me</h2>
-    <p>Your "About Me" story goes here. The one or two paragraphs you wrote down earlier.</p>
-  </section>
-<section>
-    <h2>My Projects</h2>
-    <article>
-      <h3>Project 1 Title</h3>
-      <p>A short description of your first project idea.</p>
-    </article>
-    <article>
-      <h3>Project 2 Title</h3>
-      <p>A short description of your second project idea.</p>
-    </article>
-    <article>
-      <h3>Project 3 Title</h3>
-      <p>A short description of your third project idea.</p>
-    </article>
-  </section>
-<footer>
-    <p>Get in touch: <a href="https://github.com/swarnim235"">My LinkedIn</a></p>
-  </footer>
-      </body>
-    
+    <header>
+        <!-- A navigation bar is crucial for a portfolio -->
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Swarnim Bastola</h1>
+        <p>Student & Aspiring Developer</p> <!-- More descriptive title -->
+    </header>
+
+    <main> <!-- The main content of the page -->
+        <section id="about"> <!-- Use an ID to link from navigation -->
+            <h2>About Me</h2>
+            <p>Hello! I'm Swarnim, a student passionate about web development. I'm currently learning HTML, CSS, and JavaScript, and eager to build exciting projects. My goal is to create user-friendly and visually appealing web experiences. In my free time, I enjoy [mention a hobby or interest, e.g., reading, gaming, exploring new tech].</p>
+        </section>
+
+        <section id="projects"> <!-- Use an ID to link from navigation -->
+            <h2>My Projects</h2>
+            <!-- Use a div to group articles for potential future layout -->
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Project 1: Basic Portfolio Site</h3>
+                    <p>This is my very first web project, built using fundamental HTML and CSS. It showcases my initial learning in structuring web pages and applying basic styles. It's a stepping stone to more complex future projects.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer">View Project</a> <!-- Placeholder link -->
+                </article>
+                <article class="project-card">
+                    <h3>Project 2: (Coming Soon)</h3>
+                    <p>A short description of your second project idea. This could be a simple calculator, a landing page, or a basic game.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+                </article>
+                <article class="project-card">
+                    <h3>Project 3: (Coming Soon)</h3>
+                    <p>A short description of your third project idea. Perhaps something interactive with JavaScript when you learn it.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact"> <!-- Use an ID for the footer as well for "Contact" link -->
+        <p>Get in touch:
+            <a href="https://github.com/swarnim235" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a> <!-- Replace with your actual LinkedIn URL -->
+        </p>
+        <p>&copy; <span id="current-year"></span> Swarnim Bastola. All rights reserved.</p>
+    </footer>
+
+    <!-- Basic JavaScript to automatically update the current year in the footer -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

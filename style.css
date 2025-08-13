@@ -1,13 +1,165 @@
-/* This is a CSS comment */
-
-body {
-    background-color: #f0f0f0; /* A very light gray background */
-    font-family: Arial, sans-serif; /* Change the default font */
-    line-height: 1.6; /* Improve readability of text */
-    color: #333; /* Dark gray text color */
+/* Universal box-sizing for easier layout calculations */
+/* This makes padding and border included in the element's total width/height */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
-h1 {
-    color: #007bff; /* A nice blue color for your main heading */
-    text-align: center; /* Center the main heading */
+body {
+    background-color: #f4f7f6; /* A slightly warmer light gray */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font stack */
+    line-height: 1.6;
+    color: #333;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+
+/* Header Styling */
+header {
+    background-color: #2c3e50; /* Darker blue/grey for header */
+    color: #fff;
+    padding: 1.5em 0; /* Top/bottom padding, no left/right */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+header h1 {
+    color: #f7dc6f; /* A light gold for the name */
+    margin-bottom: 0.2em;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9; /* Slightly transparent */
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none; /* Removes bullet points from the list */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arranges list items in a row */
+    justify-content: center; /* Centers the navigation items */
+    gap: 20px; /* Adds space between navigation items */
+    margin-top: 1em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold;
+    padding: 0.5em 1em;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #f7dc6f; /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+}
+
+/* Main content styling */
+main {
+    max-width: 900px; /* Set a maximum width for the content */
+    margin: 2em auto; /* Center the main content horizontally, add vertical margin */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+section {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 2em; /* Space between sections */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* More pronounced shadow for sections */
+}
+
+section h2 {
+    color: #007bff; /* Blue heading */
+    text-align: center;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #eee; /* Subtle underline effect */
+}
+
+/* Project Grid Styling (using Flexbox for layout) */
+.project-grid {
+    display: flex; /* Make project cards arrange in a row */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    gap: 20px; /* Space between project cards */
+    justify-content: center; /* Center project cards if they don't fill a row */
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1; /* Allows cards to grow and shrink */
+    min-width: 280px; /* Minimum width before wrapping */
+    max-width: 350px; /* Max width to prevent them from becoming too wide */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.project-card h3 {
+    color: #0056b3; /* Darker blue for project titles */
+    margin-top: 0;
+}
+
+.project-card a {
+    display: inline-block; /* Allows padding and margin to be applied */
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 2em; /* Space above the footer */
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #f7dc6f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Basic Responsiveness - for smaller screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically on small screens */
+        gap: 10px;
+    }
+    nav a {
+        padding: 0.3em 0.8em;
+    }
+    main {
+        margin: 1em auto;
+        padding: 0 15px;
+    }
+    section {
+        padding: 20px;
+    }
 }
